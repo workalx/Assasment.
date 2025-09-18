@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytic Letter — Report</title>
+  <meta name="description" content="Analytic letter with key metrics, charts, and takeaways in a dark style.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header reveal">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">∑</div>
+        <div class="brand-text">
+          <strong>InsightLetter</strong>
+          <span>Analytic Letter</span>
+        </div>
+      </div>
+      <nav class="actions">
+        <button id="downloadBtn" class="btn ghost">Завантажити PDF</button>
+        <button id="shareBtn" class="btn primary glow">Поділитися</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="letter-section container reveal">
+      <header class="section-head">
+        <h2>Letter (full text)</h2>
+      </header>
+      <div class="letter-card">
+        <div class="letter-head">
+          <div>Alex Khalus</div>
+          <div>Nutana Collegia</div>
+          <div>17 September 2025</div>
+        </div>
+<pre class="letter-pre">Felice Hammand
+Los Angeles, California
+
+
+
+Dear Felice,
+    My name is Alex Khalus. I have recently watched your episode on Oprah and I have some financial  advice for you. I would like to help you get out of debt, become financially stable and take control of life. 
+    First, let's look at your financial situation now. Your husband makes $6000/month. This is the only decent income in your family. But you spend a 3x of this. If we calculate, then you spend 18,000 per month on yourself and your family. The second big problem is child health insurance. Your children don't have insurance. Also, do you spend money every day at Starbucks. If you do the math, you buy 6 drinks for 6 people plus pastries. One drink costs from $6, which means you'll make about $50 a day. Now multiply this amount by 25 days (because you don't get this amount on a non-code day), and we get $1250 per month. I would also point out that you buy new expensive clothes almost every week, that also takes up money.And all these factors lead to your monthly expenses being 3 times greater than your family income. 
+
+
+  The second thing we need to do is determine how to solve this problem. My advice is this:
+1. Find a job: If you like a Starbucks, you can try there, it will solve three problems at once: you can have a one more income money in your family, your kids can have a health insurance, and you can drink what you want from Sturbacks.  
+2. Stop lying to your husband :  a relationships, especially between husband and wife cannot be strong without trust, and with lies you only destroy trust. If you improve your relationship with your husband and children, then solving these financial problems will be much easier.
+3. Stop paying for everything with a credit card: this will lead to an even larger amount in the account, which is already not small
+4. To give up one's own whims for the sake of the well-being of the family: starbucks, manicured nails and the like - all this is not of great importance, it is better to think about your relationships with other people. After all, people will love you not for your appearance. but for your personality, which you are.
+5. Move from California: this American state is considered (and is) one of the most expensive states in the country to live in. To solve your financial problems, you need to choose a place where everything will not be so expensive. Sell ​​the house because sooner or later the bank will take it anyway, and that way you will have the opportunity to at least have some profit from it.
+
+
+And finally, I ask you to start working on your development, especially financial literacy. Only in this way will you be able to solve your financial problems and not make such mistakes again.
+
+
+Please accept my advice with understanding and do not be offended by what I said, because it is true. Please contact me for a better analysis and advice on your financial situation.
+
+
+A person who wishes you all the best
+
+
+Alex Khalus</pre>
+      </div>
+    </section>
+    <section class="hero container reveal">
+      <div class="hero-content">
+        <h1>
+          <span class="accent">Financial</span> analytic letter
+        </h1>
+        <p class="lead">Based on the letter from Alex Khalus to Felice Hammond — spend analysis and recommendations.</p>
+        <div class="meta">
+          <span id="reportDate">Updated: September 17, 2025</span>
+          <span class="dot">•</span>
+          <span>Los Angeles, California</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orb"></div>
+        <div class="grid" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="kpis container reveal">
+      <div class="kpi">
+        <div class="kpi-label">Monthly family income</div>
+        <div class="kpi-value" data-prefix="$" data-target="6000">0</div>
+        <div class="kpi-delta">Source: husband's income</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Monthly spending (est.)</div>
+        <div class="kpi-value" data-prefix="$" data-target="18000">0</div>
+        <div class="kpi-delta down">3× higher than income</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Starbucks per month</div>
+        <div class="kpi-value" data-prefix="$" data-target="1250">0</div>
+        <div class="kpi-delta">6 drinks × $6 × 25 days</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Expense-to-income ratio</div>
+        <div class="kpi-value" data-target="3" data-suffix="×">0</div>
+        <div class="kpi-delta down">Critical level</div>
+      </div>
+    </section>
+
+    <section class="chart-section container reveal">
+      <header class="section-head">
+        <h2>Comparison: income vs spending</h2>
+        <div class="legend">
+          <span class="bullet primary"></span> Spending
+          <span class="bullet ghost"></span> Income
+        </div>
+      </header>
+      <div class="chart-wrapper">
+        <svg id="trendChart" viewBox="0 0 600 240" role="img" aria-label="Income and spending comparison">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g class="axes">
+            <line x1="40" y1="10" x2="40" y2="210" class="axis"/>
+            <line x1="40" y1="210" x2="580" y2="210" class="axis"/>
+          </g>
+          <path id="areaPath" class="area" d="" fill="url(#grad)" opacity="0.35"></path>
+          <path id="linePath" class="line" d="" filter="url(#glow)"></path>
+          <g id="points" class="points"></g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="insights container reveal">
+      <header class="section-head">
+        <h2>Key insights</h2>
+      </header>
+      <ul class="insight-list">
+        <li>Spending is 3× higher than income ($18,000 vs $6,000) — critical gap.</li>
+        <li>Monthly Starbucks spending around <strong>$1,250</strong>.</li>
+        <li>No child health insurance — high risk.</li>
+        <li>Frequent premium clothing purchases increase variable costs.</li>
+      </ul>
+      <div class="cta">
+        <button class="btn primary glow" id="ctaBtn">View recommendations</button>
+      </div>
+    </section>
+
+    
+
+    <section class="table-section container reveal">
+      <header class="section-head">
+        <h2>Summary table</h2>
+      </header>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Current</th>
+              <th>Target</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Income (monthly)</td>
+              <td>$6,000</td>
+              <td>$8,000+</td>
+              <td class="up">Advice: find a job</td>
+            </tr>
+            <tr>
+              <td>Spending (monthly)</td>
+              <td>$18,000</td>
+              <td>< $6,000</td>
+              <td class="down">Cut discretionary</td>
+            </tr>
+            <tr>
+              <td>Starbucks</td>
+              <td>$1,250</td>
+              <td>$200</td>
+              <td class="down">Limit purchases</td>
+            </tr>
+            <tr>
+              <td>Children's insurance</td>
+              <td>None</td>
+              <td>Active</td>
+              <td class="up">Get via job</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <footer class="site-footer reveal">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> InsightLetter — Alex Khalus, Nutana Collegia</span>
+      <a href="#" class="link">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
