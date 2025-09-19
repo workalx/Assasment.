@@ -1,4 +1,4 @@
-﻿// Date in header and footer
+// Date in header and footer
 const dateEl = document.getElementById('reportDate');
 const yearEl = document.getElementById('year');
 if (dateEl) {
@@ -39,7 +39,20 @@ function animateCounter(el) {
   }
   requestAnimationFrame(step);
 }
-document.querySelectorAll('.kpi-value').forEach(animateCounter);
+
+// KPI animation with 3 second delay when visible
+const kpiObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        animateCounter(entry.target);
+      }, 1500); // 1.5 second delay
+      kpiObserver.unobserve(entry.target);
+    }
+  }
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.kpi-value').forEach(el => kpiObserver.observe(el));
 
 // Simple SVG line chart
 function renderChart() {
@@ -89,7 +102,7 @@ function renderChart() {
     linePath.style.strokeDasharray = String(length);
     linePath.style.strokeDashoffset = String(length);
     linePath.getBoundingClientRect();
-    linePath.style.transition = 'stroke-dashoffset 1200ms ease-out';
+    linePath.style.transition = 'stroke-dashoffset 3000ms ease-out';
     requestAnimationFrame(() => { linePath.style.strokeDashoffset = '0'; });
   }
 }
@@ -135,4 +148,3 @@ document.getElementById('downloadBtn')?.addEventListener('click', async () => {
 document.getElementById('ctaBtn')?.addEventListener('click', () => {
   showToast('Recommendations: job, kids insurance, cut Starbucks, consider moving');
 });
-
